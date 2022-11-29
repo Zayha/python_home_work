@@ -13,7 +13,7 @@ import numpy as np
 n = int(input("Укажите число n = "))
 
 # стартовая матрица исходных значений:
-# ( 1  1 )   =   ( Fn+1  Fn   )
+# ( 1  1 ) n =   ( Fn+1  Fn   )
 # ( 0  1 )   =   ( Fn    Fn-1 )
 matrix1 = np.array([[1, 1], [1, 0]], dtype=float)
 
