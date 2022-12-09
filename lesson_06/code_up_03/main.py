@@ -7,6 +7,9 @@ def list_print(lst):
             print("")
 
 
+cx = lambda x: True if x == "x" else False
+co = lambda y: True if y == "o" else False
+
 def who_win(lst):
     win_list = [[0, 1, 2],
                 [3, 4, 5],
@@ -18,9 +21,11 @@ def who_win(lst):
                 [2, 4, 6]]
 
     for i in win_list:
-        if lst[i[0]] == 'x' and lst[i[1]] == 'x' and lst[i[2]] == 'x':
+        if len(list(filter(cx, [lst[i[0]], lst[i[1]], lst[i[2]]]))) == 3:
+        # if lst[i[0]] == 'x' and lst[i[1]] == 'x' and lst[i[2]] == 'x':
             return 'x'
-        if lst[i[0]] == 'o' and lst[i[1]] == 'o' and lst[i[2]] == 'o':
+        if len(list(filter(co, [lst[i[0]], lst[i[1]], lst[i[2]]]))) == 3:
+        # if lst[i[0]] == 'o' and lst[i[1]] == 'o' and lst[i[2]] == 'o':
             return 'o'
     return False
 
@@ -34,5 +39,3 @@ for i in range(10):
     if who_win(lst) != False:
         print(f"Победили {who_win(lst)}")
         break
-
-
