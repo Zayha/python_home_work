@@ -9,7 +9,6 @@ def list_print(lst):
 
 cx = lambda x: True if x == "x" else False
 co = lambda y: True if y == "o" else False
-
 def who_win(lst):
     win_list = [[0, 1, 2],
                 [3, 4, 5],
