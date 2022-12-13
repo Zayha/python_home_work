@@ -1,5 +1,6 @@
-import json, csv
 import pandas as pd
+
+from model import read_db
 
 
 def export_to_csv(path='db.json', csv_file_name='csv_base.csv'):
@@ -7,8 +8,12 @@ def export_to_csv(path='db.json', csv_file_name='csv_base.csv'):
     df = pd.read_json(path)
     df.to_csv(csv_file_name)
 
-#     with open(path, encoding='utf-8') as json_file:
-#         data = json.load(json_file)
-#
-#     with open(csv_file_name, 'w') as csv_file:
-#         csv.writer(csv_file)
+
+def export_to_txt(path='db.json', txt_file_name='txt_base.txt'):
+    data = read_db()
+    with open(txt_file_name, 'w') as txt_file:
+        for i in data:
+            for k in i:
+                txt_file.write(i[k])
+                txt_file.write('\n')
+            txt_file.write('\n')

@@ -1,6 +1,6 @@
 from data_processing import get_data_from_console
-from export_data import export_to_csv
-from model import read_db, add_to_db
+from export_data import export_to_csv, export_to_txt
+from model import read_db, add_to_db, import_from_csv, import_from_txt
 from view_mod import show_base as sb
 
 
@@ -18,10 +18,13 @@ def controller(number):
             export_to_csv()
             return "*"
         case '4':
+            export_to_txt()
             return "*"
         case '5':
+            import_from_csv()
             return "*"
         case '6':
+            import_from_txt()
             return "*"
         case '7':
             return "-"

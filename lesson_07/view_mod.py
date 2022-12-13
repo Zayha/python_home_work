@@ -1,7 +1,7 @@
 menu = [
     'Show Base',
     'Add an entry to the phone book',
-    'Delete a record from the phone book',
+    'Delete a record from the phone book(not ready)',
     'Export DB to CSV',
     'Export DB to txt',
     'Import DB from CSV',
