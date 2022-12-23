@@ -1,12 +1,14 @@
+import data_processing
 from view_mod import show_menu as sm
-from controller import *
+import controller
 
 
 def main():
+    data_processing.check_on_start()
     flag = '*'
     while flag == '*':
         sm()
-        flag = controller(input("Select menu number: "))
+        flag = controller.controller(input("Select menu number: "))
 
 
 if __name__ == '__main__':
